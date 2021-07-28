@@ -1,8 +1,7 @@
 const request = require ("postman-request");
-const key = require("../../confidential")
 const getWeather = (city, callback) => {
     
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8f9c0d46fafbc1ee8f89e3aa08c3fd8f`
    
     request({url: url, json: true}, (error, respond, body) => {
         
