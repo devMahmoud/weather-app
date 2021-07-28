@@ -4,6 +4,7 @@ const hbs = require("hbs")
 const getWeather = require("./src/utils/forecast")
 
 const app = express()
+const port = process.env.PORT || 3000
 
 app.set("view engine", "hbs")
 hbs.registerPartials(path.join(__dirname, "/views/partials"))
@@ -72,6 +73,6 @@ app.get("*", (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("app is running on port 3000")
+app.listen(port, () => {
+    console.log(`app is running on port ${port}`)
 })
